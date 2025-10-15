@@ -23,7 +23,6 @@ O projeto é dividido em 5 células principais, descritas abaixo:
 🧱 Célula 1 — Instalação de Dependências
 ![Instalação das Bibliotecas](images/install.png)
 
-
 Instala os pacotes necessários para o funcionamento do projeto:
 
 !pip install -q --upgrade pip
