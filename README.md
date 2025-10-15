@@ -26,7 +26,6 @@ O projeto é dividido em 5 células principais, descritas abaixo:
 
 
 Instala os pacotes necessários para o funcionamento do projeto:
-
 !pip install -q --upgrade pip
 !pip install -q git+https://github.com/openai/whisper.git   # Whisper (OpenAI)
 !pip install -q gradio==3.39.0                              # Interface Web
@@ -34,6 +33,7 @@ Instala os pacotes necessários para o funcionamento do projeto:
 !pip install -q yake                                        # Extração de keywords
 !pip install -q gTTS                                        # Text-to-Speech
 !pip install -q soundfile                                   # Manipulação de áudio
+
 
 🧠 Célula 2 — Imports e Carregamento dos Modelos
 
