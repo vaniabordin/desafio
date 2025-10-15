@@ -29,17 +29,17 @@ Instala os pacotes necessários para o funcionamento do projeto:
 
 !pip install -q --upgrade pip
 
-!pip install -q git+https://github.com/openai/whisper.git   # Whisper (OpenAI)
+!pip install -q git+https://github.com/openai/whisper.git     # Whisper (OpenAI)
 
-!pip install -q gradio==3.39.0                              # Interface Web
+!pip install -q gradio==3.39.0                                # Interface Web
 
-!pip install -q transformers                                # Modelos Hugging Face
+!pip install -q transformers                                  # Modelos Hugging Face
 
-!pip install -q yake                                        # Extração de keywords
+!pip install -q yake                                          # Extração de keywords
 
-!pip install -q gTTS                                        # Text-to-Speech
+!pip install -q gTTS                                          # Text-to-Speech
 
-!pip install -q soundfile                                   # Manipulação de áudio
+!pip install -q soundfile                                     # Manipulação de áudio
 
 
 🧠 Célula 2 — Imports e Carregamento dos Modelos
@@ -62,19 +62,26 @@ YAKE: configuração para extrair até 8 palavras-chave em português.
 
 Contém as funções principais do projeto:
 
-transcribe_audio(): realiza a transcrição de um arquivo de áudio.
+transcribe_audio(): realiza a transcrição de um arquivo de áudio. 
+
 
 analyze_sentiment(): analisa o sentimento do texto transcrito.
 
+
 extract_keywords(): extrai as principais palavras-chave.
 
+
 text_to_speech(): converte o texto em áudio com voz sintetizada.
+
 
 Exemplo de uso:
 
 texto = "A análise de dados é um processo sistêmico para inspecionar, limpar, transformar e modelar dados brutos."
+
 arquivo = text_to_speech(texto)
+
 display(Audio(arquivo, autoplay=True))
+
 
 🔗 Célula 4 — Função Principal
 
@@ -109,21 +116,21 @@ Reproduzir o áudio sintetizado.
 
 demo.launch(share=True) : gera um link público temporário.
 
-🧰 Tecnologias Utilizadas
+🧰 Tecnologias Utilizadas:
 
-Biblioteca | Função Principal
+Biblioteca   |   Função Principal
 
-Whisper |	Transcrição de fala
+Whisper  | 	 Transcrição de fala
 
-Gradio |	Interface interativa
+Gradio   |	 Interface interativa
 
-Transformers (Hugging Face)	| Análise de sentimento
+Transformers (Hugging Face) 	|   Análise de sentimento
 
-YAKE |	Extração de palavras-chave
+YAKE   |	Extração de palavras-chave
 
-gTTS |	Síntese de fala
+gTTS   |	Síntese de fala
 
-SoundFile |	Manipulação de arquivos de áudio
+SoundFile  |	Manipulação de arquivos de áudio
 
 ![Laboratório de Fala](images/Laboratorio_de_Fala.png)
 
