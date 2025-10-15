@@ -22,20 +22,10 @@ O projeto é dividido em 5 células principais, descritas abaixo:
 
 🧱 Célula 1 — Instalação de Dependências
 
-![Instalação das Bibliotecas](images/install.png)
-
-
 Instala os pacotes necessários para o funcionamento do projeto:
 
-```bash
-!pip install -q --upgrade pip
-!pip install -q git+https://github.com/openai/whisper.git     # Whisper (OpenAI)
-!pip install -q gradio==3.39.0                                # Interface Web
-!pip install -q transformers                                  # Modelos Hugging Face
-!pip install -q yake                                          # Extração de keywords
-!pip install -q gTTS                                          # Text-to-Speech
-!pip install -q soundfile                                     # Manipulação de áudio
-```
+![Instalação das Bibliotecas](images/install.png)
+
 
 🧠 Célula 2 — Imports e Carregamento dos Modelos
 
