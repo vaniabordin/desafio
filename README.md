@@ -21,7 +21,9 @@ Funcionalidades:
 O projeto é dividido em 5 células principais, descritas abaixo:
 
 🧱 Célula 1 — Instalação de Dependências
+
 ![Instalação das Bibliotecas](images/install.png)
+
 
 Instala os pacotes necessários para o funcionamento do projeto:
 
@@ -34,7 +36,10 @@ Instala os pacotes necessários para o funcionamento do projeto:
 !pip install -q soundfile                                   # Manipulação de áudio
 
 🧠 Célula 2 — Imports e Carregamento dos Modelos
+
 ![Carregamento dos Modelos](images/Carregamento_rapido.png)
+
+
 Carrega as bibliotecas e inicializa os modelos principais:
 
 Whisper (modelo small): utilizado para transcrição de áudio.
@@ -44,7 +49,10 @@ Pipeline de sentimento: modelo multilíngue da Hugging Face.
 YAKE: configuração para extrair até 8 palavras-chave em português.
 
 ⚙️ Célula 3 — Funções Utilitárias
+
 ![Funções Utilitárias](images/Função_Utilitária.png)
+
+
 Contém as funções principais do projeto:
 
 transcribe_audio(): realiza a transcrição de um arquivo de áudio.
@@ -62,7 +70,10 @@ arquivo = text_to_speech(texto)
 display(Audio(arquivo, autoplay=True))
 
 🔗 Célula 4 — Função Principal
+
 ![Função Principal](images/Função_Integra_Tudo.png)
+
+
 Integra todas as funções anteriores para processar o áudio completo:
 
 def process_audio(audio_file):
@@ -73,7 +84,10 @@ def process_audio(audio_file):
     return transcript, sentiment, keywords, tts_file
 
 🖥️ Célula 5 — Interface com Gradio
+
 ![Interface Gradio](images/Interface_Gracio.png)
+
+
 Cria a interface web que permite:
 
 Gravar a fala do usuário.
@@ -98,6 +112,8 @@ gTTS |	Síntese de fala
 SoundFile |	Manipulação de arquivos de áudio
 
 ![Laboratório de Fala](images/Laboratorio_de_Fala.png)
+
+
 🧠 Conceitos Envolvidos:
 
 Processamento de Áudio (ASR — Automatic Speech Recognition)
@@ -136,5 +152,6 @@ Este projeto é um protótipo educacional e livre para uso e modificação com f
 
 ✨ Autoria
 
-Autora: [Vânia Cristina Bordin Freitas]
+[Vânia Cristina Bordin Freitas]
+
 💬 Projeto criado para explorar modelos de linguagem, processamento de áudio e interfaces interativas em Python.
