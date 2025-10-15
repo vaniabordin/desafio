@@ -27,20 +27,15 @@ O projeto é dividido em 5 células principais, descritas abaixo:
 
 Instala os pacotes necessários para o funcionamento do projeto:
 
+```bash
 !pip install -q --upgrade pip
-
 !pip install -q git+https://github.com/openai/whisper.git     # Whisper (OpenAI)
-
 !pip install -q gradio==3.39.0                                # Interface Web
-
 !pip install -q transformers                                  # Modelos Hugging Face
-
 !pip install -q yake                                          # Extração de keywords
-
 !pip install -q gTTS                                          # Text-to-Speech
-
 !pip install -q soundfile                                     # Manipulação de áudio
-
+```
 
 🧠 Célula 2 — Imports e Carregamento dos Modelos
 
@@ -75,12 +70,11 @@ text_to_speech(): converte o texto em áudio com voz sintetizada.
 
 
 Exemplo de uso:
-
+```python
 texto = "A análise de dados é um processo sistêmico para inspecionar, limpar, transformar e modelar dados brutos."
-
 arquivo = text_to_speech(texto)
-
 display(Audio(arquivo, autoplay=True))
+```
 
 
 🔗 Célula 4 — Função Principal
@@ -89,14 +83,14 @@ display(Audio(arquivo, autoplay=True))
 
 
 Integra todas as funções anteriores para processar o áudio completo:
-
+```python
 def process_audio(audio_file):
     transcript = transcribe_audio(audio_file)
     sentiment = analyze_sentiment(transcript)
     keywords = extract_keywords(transcript)
     tts_file = text_to_speech(transcript, lang="pt")
     return transcript, sentiment, keywords, tts_file
-
+```
 🖥️ Célula 5 — Interface com Gradio
 
 ![Interface Gradio](images/Interface_Gracio.png)
@@ -113,24 +107,20 @@ Mostrar o resultado da análise de sentimento.
 Listar as palavras-chave detectadas.
 
 Reproduzir o áudio sintetizado.
-
+```python
 demo.launch(share=True) : gera um link público temporário.
-
+```
 🧰 Tecnologias Utilizadas:
 
-Biblioteca   |   Função Principal
+| Biblioteca                | Função Principal               |
+|---------------------------|-------------------------------|
+| Whisper                   | Transcrição de fala           |
+| Gradio                    | Interface interativa          |
+| Transformers (Hugging Face)| Análise de sentimento        |
+| YAKE                      | Extração de palavras-chave    |
+| gTTS                      | Síntese de fala               |
+| SoundFile                 | Manipulação de arquivos de áudio |
 
-Whisper  | 	 Transcrição de fala
-
-Gradio   |	 Interface interativa
-
-Transformers (Hugging Face) 	|   Análise de sentimento
-
-YAKE   |	Extração de palavras-chave
-
-gTTS   |	Síntese de fala
-
-SoundFile  |	Manipulação de arquivos de áudio
 
 ![Laboratório de Fala](images/Laboratorio_de_Fala.png)
 
